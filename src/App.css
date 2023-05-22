@@ -2,12 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 html {
   font-size: 16px;
 }
 
-.body {
+body {
   font-family: 'Wix Madefor Display', sans-serif;
   background-color: #f3f3f3;
 }
@@ -75,6 +76,21 @@ html {
 }
 .logo-text span:nth-child(11) {
   color: #80D8DA;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .navbar {
@@ -152,6 +168,20 @@ html {
     margin-left: 10px;
   }
 
+  .logo-section h2 {
+    padding-left: 6px; 
+    padding-top: 2px; 
+    font-size: 1.2rem; 
+    letter-spacing: 0.8px;
+  }
+
+  .navbar {
+    justify-content: center; 
+    margin-right: 0; 
+    letter-spacing: normal; 
+    font-size: 0.875rem; 
+  }
+
   .menu-icon {
     display: block;
   }
@@ -159,8 +189,126 @@ html {
   .navbar ul {
     display: flex;
   }
+}
 
-  input[type="checkbox"]:checked ~ .navbar ul {
-    display: flex;
+/* ============================================== Home ============================================ */
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  font-family: 'Alata', sans-serif;
+}
+
+.left-column {
+  flex: 1;
+  text-align: center;
+}
+
+.right-column {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.myphoto {
+  height: 400px;
+  width: 400px;
+}
+
+.hand-emoji-container {
+  display: inline-block;
+  animation: moveHand 1.3s infinite alternate;
+}
+
+@keyframes moveHand {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
   }
 }
+
+.gradient-text {
+  background: linear-gradient(45deg, #EEA302, #FF3B25, #0000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc-text {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: normal;
+  width: 70%;
+}
+
+/* ============================================== About ============================================ */
+
+.about-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aboutme {
+  height: 350px;
+  width: 350px;
+}
+
+.about-text {
+  text-align: center;
+  margin-top: 4%;
+  letter-spacing: 1px;
+}
+
+.about-desc {
+  padding-top: 30px;
+  width: 42%;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.desc-text {
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+/* ============================================== Education ============================================ */
+
+.education {
+  height: 450px;
+  width: 450px;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .left-column, .right-column {
+    flex: none;
+    width: 100%;
+  }
+
+  .right-column {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .myphoto {
+    height: 240px;
+    width: 240px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
