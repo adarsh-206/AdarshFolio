@@ -2,8 +2,35 @@ import React from 'react'
 import NavBar from './NavBar'
 import myphoto from '../myphoto.png'
 import developer from '../developer.png'
-import education from '../education.png'
 import { TypeAnimation } from 'react-type-animation'
+import htmlImage from '../images/html.png'
+import cssImage from '../images/css.png'
+import javascriptImage from '../images/js.png'
+import reactImage from '../images/react.png'
+import cppImage from '../images/c++.png'
+import dsImage from '../images/dsa.png'
+import nodeImage from '../images/node.png'
+import database from '../images/database.png'
+
+const skills = [
+  { name: 'HTML', image: htmlImage },
+  { name: 'CSS', image: cssImage },
+  { name: 'JavaScript', image: javascriptImage },
+  { name: 'ReactJS', image: reactImage },
+  { name: 'NodeJS', image: nodeImage },
+  { name: 'C/C++', image: cppImage },
+  { name: 'Data Structures', image: dsImage },
+  { name: 'MongoDB & MySQL', image: database }
+];
+
+const Card = ({ skill }) => {
+  return (
+    <div className="card">
+      <img src={skill.image} alt={skill.name} className="card-image" />
+      <h3>{skill.name}</h3>
+    </div>
+  );
+};
 
 function Home() {
   return (
@@ -20,7 +47,7 @@ function Home() {
             sequence={[
               'A tech enthusiast',
               1000,
-              'and a frontend web developer 👨‍💻',
+              'a frontend web developer 👨‍💻',
             ]}
             wrapper="span"
             cursor={false}
@@ -44,8 +71,15 @@ function Home() {
         </div>
       </div>
 
-      <div><h1 className='about-text'>Educational Backgound</h1></div>
-      
+      <div><h1 className='about-text'>Skills</h1></div>
+      <div className="container">
+      {skills.map((skill, index) => (
+        <Card key={index} skill={skill} />
+      ))}
+    </div>
+
+    <div><h1 className='about-text'>Projects</h1></div>
+
 
     </> 
   )

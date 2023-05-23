@@ -273,12 +273,44 @@ body {
   line-height: 1.2;
 }
 
-/* ============================================== Education ============================================ */
+/* ============================================== Skills ============================================ */
 
-.education {
-  height: 450px;
-  width: 450px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 250px;
+  height: 120px;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+/* ==============================================  ============================================ */
 
 @media (max-width: 768px) {
   .home-content {
