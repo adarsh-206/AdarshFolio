@@ -1,19 +1,26 @@
 {
   "files": {
-    "main.css": "/adarshfolio/static/css/main.529b8ee0.css",
-    "main.js": "/adarshfolio/static/js/main.d7bbba88.js",
+    "main.css": "/adarshfolio/static/css/main.d407e242.css",
+    "main.js": "/adarshfolio/static/js/main.87a3b30f.js",
     "static/js/787.419e500d.chunk.js": "/adarshfolio/static/js/787.419e500d.chunk.js",
     "static/media/myphoto.png": "/adarshfolio/static/media/myphoto.f6f61ee9127fb255f4f4.png",
-    "static/media/education.png": "/adarshfolio/static/media/education.6c574c1da0125f607bf9.png",
+    "static/media/html.png": "/adarshfolio/static/media/html.1d7b133e22ffe4829da6.png",
     "static/media/developer.png": "/adarshfolio/static/media/developer.0d77ee76f61306400b23.png",
+    "static/media/database.png": "/adarshfolio/static/media/database.d841506f883589f1c51c.png",
+    "static/media/css.png": "/adarshfolio/static/media/css.9f33c557b92e4e2e1cc8.png",
+    "static/media/dsa.png": "/adarshfolio/static/media/dsa.40fd3077b249f7a18f40.png",
+    "static/media/react.png": "/adarshfolio/static/media/react.20adfb35ae6a6e5817bf.png",
+    "static/media/js.png": "/adarshfolio/static/media/js.1707d09a3f6f31bb97e8.png",
+    "static/media/node.png": "/adarshfolio/static/media/node.1ba94b32dec88c028c42.png",
+    "static/media/c++.png": "/adarshfolio/static/media/c++.1240ce157b70fb399c6c.png",
     "static/media/logo.svg": "/adarshfolio/static/media/logo.657a3da342489c73e258f83f4e7b9e9f.svg",
     "index.html": "/adarshfolio/index.html",
-    "main.529b8ee0.css.map": "/adarshfolio/static/css/main.529b8ee0.css.map",
-    "main.d7bbba88.js.map": "/adarshfolio/static/js/main.d7bbba88.js.map",
+    "main.d407e242.css.map": "/adarshfolio/static/css/main.d407e242.css.map",
+    "main.87a3b30f.js.map": "/adarshfolio/static/js/main.87a3b30f.js.map",
     "787.419e500d.chunk.js.map": "/adarshfolio/static/js/787.419e500d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.529b8ee0.css",
-    "static/js/main.d7bbba88.js"
+    "static/css/main.d407e242.css",
+    "static/js/main.87a3b30f.js"
   ]
 }
