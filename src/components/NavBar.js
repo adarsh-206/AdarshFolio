@@ -24,10 +24,11 @@ function NavBar() {
           </div>
           <div className="navbar">
             <ul>
-              <li><a href="/resume">Resume</a></li>
-              <li><a href="/project">Projects</a></li>
+              <li><a href="/project">Skills</a></li>
+              <li><a href="/contact">Project</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
+            <a className='gradient-text1' href="/contact">Resume</a>
           </div>
        </nav>    
   )
