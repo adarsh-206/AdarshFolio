@@ -13,6 +13,7 @@ import nodeImage from '../images/node.png'
 import database from '../images/database.png'
 import Footer from './Footer'
 
+
 const skills = [
   { name: 'HTML', image: htmlImage },
   { name: 'CSS', image: cssImage },
@@ -112,14 +113,14 @@ function Home() {
         </div>
       </div>
 
-      <div><h1 className='about-text'>Skills</h1></div>
+      <div><h1 className='about-text' id='skills'>Skills</h1></div>
       <div className="skill-container">
       {skills.map((skill, index) => (
         <Card key={index} skill={skill} />
       ))}
     </div>
 
-    <div><h1 className='about-text'>Projects</h1></div>
+    <div><h1 className='about-text' id='projects'>Projects</h1></div>
     <div>
     <div class="project-container">
 		<div class="box">
@@ -166,7 +167,7 @@ function Home() {
   	</svg>
     </div>
 
-    <div><h1 className='about-text'>Get in Touch</h1></div>
+    <div id='contact'><h1 className='about-text'>Get in Touch</h1></div>
     <p style={{textAlign: 'center', letterSpacing: '0.5px', paddingBottom: '20px'}}>Let's have a cup of coffee and take a moment to savor the simple joys of life.</p>
     <div class="contact-container">
     <div class="column image-column">

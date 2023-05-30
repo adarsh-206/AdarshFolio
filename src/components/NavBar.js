@@ -2,6 +2,26 @@ import React from 'react'
 import logo from '../logo.svg';
 
 function NavBar() {
+  const scrollToSkills = (event) => {
+    event.preventDefault();
+    const skillsElement = document.getElementById('skills');
+    skillsElement.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToProject = (event) => {
+    event.preventDefault();
+    const skillsElement = document.getElementById('projects');
+    skillsElement.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToContact = (event) => {
+    event.preventDefault();
+    const skillsElement = document.getElementById('contact');
+    skillsElement.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleDownload = () => {
+    const pdfUrl = 'https://drive.google.com/file/d/1JWHOvG5trIkDredcOjV9BUr_imgrFQkJ/view?usp=sharing';
+    window.open(pdfUrl, '_blank');
+  };
+
   return (
       <nav className="header">
           <div className='logo-section'>
@@ -24,11 +44,11 @@ function NavBar() {
           </div>
           <div className="navbar">
             <ul>
-              <li><a href="/project">Skills</a></li>
-              <li><a href="/contact">Project</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="#skills" onClick={scrollToSkills}>Skills</a></li>
+              <li><a href="#projects" onClick={scrollToProject}>Project</a></li>
+              <li><a href="#contact" onClick={scrollToContact}>Contact</a></li>
             </ul>
-            <a className='gradient-text1' href="/contact">Resume</a>
+            <a className='gradient-text1' href="#" onClick={handleDownload}>Resume</a>
           </div>
        </nav>    
   )
