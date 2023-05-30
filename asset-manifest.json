@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adarshfolio/static/css/main.b0e4a07f.css",
-    "main.js": "/adarshfolio/static/js/main.76a59e70.js",
+    "main.css": "/adarshfolio/static/css/main.dba36232.css",
+    "main.js": "/adarshfolio/static/js/main.a5e0c988.js",
     "static/js/787.419e500d.chunk.js": "/adarshfolio/static/js/787.419e500d.chunk.js",
     "static/media/myphoto.png": "/adarshfolio/static/media/myphoto.f6f61ee9127fb255f4f4.png",
     "static/media/html.png": "/adarshfolio/static/media/html.1d7b133e22ffe4829da6.png",
@@ -15,12 +15,12 @@
     "static/media/c++.png": "/adarshfolio/static/media/c++.1240ce157b70fb399c6c.png",
     "static/media/logo.svg": "/adarshfolio/static/media/logo.657a3da342489c73e258f83f4e7b9e9f.svg",
     "index.html": "/adarshfolio/index.html",
-    "main.b0e4a07f.css.map": "/adarshfolio/static/css/main.b0e4a07f.css.map",
-    "main.76a59e70.js.map": "/adarshfolio/static/js/main.76a59e70.js.map",
+    "main.dba36232.css.map": "/adarshfolio/static/css/main.dba36232.css.map",
+    "main.a5e0c988.js.map": "/adarshfolio/static/js/main.a5e0c988.js.map",
     "787.419e500d.chunk.js.map": "/adarshfolio/static/js/787.419e500d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0e4a07f.css",
-    "static/js/main.76a59e70.js"
+    "static/css/main.dba36232.css",
+    "static/js/main.a5e0c988.js"
   ]
 }
