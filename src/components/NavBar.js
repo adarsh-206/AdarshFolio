@@ -27,7 +27,7 @@ function NavBar() {
       <nav className="header">
           <div className='logo-section'>
             <img src={logo} className="App-logo" alt="logo" />
-            <a href="/" style={{ textDecoration: 'none' }}>
+            <a href="/adarshfolio" style={{ textDecoration: 'none' }}>
             <h2 class="logo-text">
               <span>A</span>
               <span>d</span>
