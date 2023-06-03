@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import NavBar from './NavBar'
 import myphoto from '../myphoto.png'
 import developer from '../developer.png'
@@ -12,6 +12,7 @@ import dsImage from '../images/dsa.png'
 import nodeImage from '../images/node.png'
 import database from '../images/database.png'
 import Footer from './Footer'
+import locationIcon from '../location.svg';
 
 
 const skills = [
@@ -57,23 +58,45 @@ function Home() {
     { '--i': 4 },
     { '--i': 19 }
   ];
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    alert("Details submitted successfully! I'll be in touch shortly. Thank you!")
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+  };
   const redirectToVeggieFreshGitHub = () => {
-    window.location.href = 'https://github.com';
+    window.open('https://github.com/adarsh-206/VeggieFresh', '_blank');
   };
   const redirectToVeggieFresh = () => {
-    window.location.href = 'https://github.com';
+    window.open('https://github.com/adarsh-206/VeggieFresh', '_blank');
   };
   const redirectToFilesMobGitHub = () => {
-    window.location.href = 'https://github.com';
+    window.open('https://github.com/adarsh-206/filesmob', '_blank');
   };
   const redirectToFilesMob = () => {
-    window.location.href = 'https://github.com';
+    window.open('https://github.com/adarsh-206/filesmob', '_blank');
   };
   const redirectToNotesAddaGitHub = () => {
-    window.location.href = 'https://github.com';
+    window.open('https://github.com/adarsh-206/NotesAdda', '_blank');
   };
   const redirectToNotesAdda = () => {
-    window.location.href = 'https://github.com';
+    window.open('https://github.com/adarsh-206/NotesAdda', '_blank');
   };
   return (
     <>
@@ -118,6 +141,84 @@ function Home() {
       {skills.map((skill, index) => (
         <Card key={index} skill={skill} />
       ))}
+    </div>
+
+    <div><h1 className='about-text' id='education'>Education & Internships</h1></div>
+    <div className='education-section'>
+    <div className='container'>
+       <main className='row'>
+          <section className='col'>
+             <header className='title'>
+              <p>EDUCATION</p>
+             </header>
+             <div className='contents'>
+                <div className='box'>
+                  <h5>2019-2023</h5>
+                  <h4>Bachelor of Engineering - 7.7 / 10</h4>
+                  <p style={{textAlign: 'justify', letterSpacing: '0.5', lineHeight: '1.2', fontSize: '0.9rem', paddingBottom: '10px'}}>I have completed my Bachelor's in Electronics and Instrumentation Engineering, gaining a strong foundation in electrical circuits, instrumentation techniques, and control systems.</p>
+                  <p style={{ display: 'flex', alignItems: 'center' , fontSize: '0.9rem'}}>
+                    <img src={locationIcon} alt="Location" width="17px" height="13px" style={{ marginRight: '5px' }} />
+                    Institute of Engineering and Technology, Indore (M.P)
+                  </p>
+                </div>
+                <div className='box'>
+                  <h5>2017-2018</h5>
+                  <h4>All India Senior School Certificate Examination - XII Class - 79%</h4>
+                  <p style={{textAlign: 'justify', letterSpacing: '0.5', lineHeight: '1.2', fontSize: '0.9rem', paddingBottom: '10px'}}>I have successfully completed my 12th grade from the CBSE board with a combination of Physics, Chemistry, Mathematics, and Computer Science subjects.</p>
+                  <p style={{ display: 'flex', alignItems: 'center' , fontSize: '0.9rem'}}>
+                    <img src={locationIcon} alt="Location" width="17px" height="13px" style={{ marginRight: '5px' }} />
+                    Pioneer Public School Dewas M.P
+                  </p>
+                </div>
+                <div className='box'>
+                  <h5>2015-2016</h5>
+                  <h4>All India Secondary School Examination - X Class - 9.2 CGPA</h4>
+                  <p style={{textAlign: 'justify', letterSpacing: '0.5', lineHeight: '1.2', fontSize: '0.9rem', paddingBottom: '10px'}}>I have successfully completed my 10th grade education under the Central Board of Secondary Education (CBSE), which provided a strong foundation for my academic journey.</p>
+                  <p style={{ display: 'flex', alignItems: 'center' , fontSize: '0.9rem'}}>
+                    <img src={locationIcon} alt="Location" width="17px" height="13px" style={{ marginRight: '5px' }} />
+                    Pioneer Public School Dewas M.P
+                  </p>
+                </div>
+             </div>
+          </section>
+
+          <section className='col'>
+             <header className='title'>
+              <p>INTERNSHIPS</p>
+             </header>
+             <div className='contents'>
+                <div className='box'>
+                  <h5>January 23 - Present</h5>
+                  <h4>Software Development Engineering Intern - Metafic</h4>
+                  <p style={{textAlign: 'justify', letterSpacing: '0.5', lineHeight: '1.2', fontSize: '0.9rem', paddingBottom: '10px'}}>Developed responsive websites for clients using HTML5, JavaScript, ReactJS, and TypeScript. Worked on UI/UX, Restful API, testing, troubleshooting, and front-end coding and deployment in JavaScript environment.</p>
+                  <p style={{ display: 'flex', alignItems: 'center' , fontSize: '0.9rem'}}>
+                    <img src={locationIcon} alt="Location" width="17px" height="13px" style={{ marginRight: '5px' }} />
+                    Indore M.P
+                  </p>
+                </div>
+                <div className='box'>
+                  <h5>December 22 - January 23</h5>
+                  <h4>Web Development Intern - LueurTech Software Solutions</h4>
+                  <p style={{textAlign: 'justify', letterSpacing: '0.5', lineHeight: '1.2', fontSize: '0.9rem', paddingBottom: '10px'}}>Actively contributed to an e-commerce website project, addressing frontend and backend challenges. I enhanced the website by implementing new features using a stack that included HTML, CSS, SASS, JavaScript, and PHP technologies.</p>
+                  <p style={{ display: 'flex', alignItems: 'center' , fontSize: '0.9rem'}}>
+                    <img src={locationIcon} alt="Location" width="17px" height="13px" style={{ marginRight: '5px' }} />
+                    Remote
+                  </p>
+                </div>
+                <div className='box'>
+                  <h5>September 22 - December 22</h5>
+                  <h4>Virtual Intern - Microsoft Future Ready Talent Intern</h4>
+                  <p style={{textAlign: 'justify', letterSpacing: '0.5', lineHeight: '1.2', fontSize: '0.9rem', paddingBottom: '13px'}}>Developed a virtual healthcare assistant using various Microsoft Azure services for seamless patient care and support. Explored and implemented different Azure technologies.</p>
+                  <p style={{ display: 'flex', alignItems: 'center' , fontSize: '0.9rem'}}>
+                    <img src={locationIcon} alt="Location" width="17px" height="13px" style={{ marginRight: '5px' }} />
+                    Remote
+                  </p>
+                </div>
+             </div>
+          </section>
+
+       </main>
+    </div>
     </div>
 
     <div><h1 className='about-text' id='projects'>Projects</h1></div>
@@ -191,23 +292,55 @@ function Home() {
     </div>
     <div class="column form-column">
     <div className="form-container">
-      <form>
-        <div className="form-group">
-          <input type="text" id="name" name="name" placeholder="Name" required />
-        </div>
-        <div className="form-group">
-          <input type="email" id="email" name="email" placeholder="Email" required />
-        </div>
-        <div className="form-group">
-          <input type="phone" id="phone" name="phone" placeholder="Mobile Number" required />
-        </div>
-        <div className="form-group">
-          <textarea id="message" name="message" placeholder="Message" required></textarea>
-        </div>
-        <div className="form-group" style={{textAlign: 'center'}}>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+    <form onSubmit={submitForm}>
+      <div className="form-group">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <input
+          type="phone"
+          id="phone"
+          name="phone"
+          placeholder="Mobile Number"
+          value={formData.phone}
+          onChange={handleInputChange}
+          pattern="[0-9]{10}"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Message"
+          value={formData.message}
+          onChange={handleInputChange}
+          required
+        ></textarea>
+      </div>
+      <div className="form-group" style={{ textAlign: 'center' }}>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
     </div>
     </div>
   </div>

@@ -437,6 +437,7 @@ svg
 .custom-button-yellow:hover {
   background-color: #f3f3f3;
   border: 2px solid #facf74;
+  color: #111;
 }
 
 .custom-button-pink {
@@ -452,6 +453,7 @@ svg
 .custom-button-pink:hover {
   background-color: #f3f3f3;
   border: 2px solid #fa8275;
+  color: #111;
 }
 
 .custom-button-blue {
@@ -467,6 +469,7 @@ svg
 .custom-button-blue:hover {
   background-color: #f3f3f3;
   border: 2px solid #38f5f8;
+  color: #111;
 }
 
 .contact-container {
@@ -695,6 +698,85 @@ button:hover {
   }
 }
 
+/* ============================== Education and Experience ==================================== */
+
+.education-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  padding: 35px 10%;
+}
+
+.container {
+  padding-right: calc(10% - 30px);
+}
+
+main.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.col header.title {
+  color: #11a372;
+  padding: 0px 0px 20px 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.col .contents {
+  padding: 0px 30px;
+  border-left: 2px solid #bababa;
+}
+
+.col .contents .box {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 20px;
+}
+
+.col .contents .box:hover {
+  box-shadow: 0px 3px 12px 0px #ccc;
+  border: 1px solid transparent;
+}
+
+.col .contents .box::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: calc(100% + 22px);
+  top: 0;
+  background-color: #11a372;
+  border: 2px solid white;
+}
+
+.box h5 {
+  position: relative;
+  color: #11a372;
+}
+
+.box h4 {
+  padding: 4px 0px 3px;
+}
+
+.box p {
+  line-height: 1.2;
+}
+
+
+
+/* =================================================================================================== */
+
 @media (max-width: 768px) {
   .home-content {
     flex-direction: column;
@@ -715,6 +797,14 @@ button:hover {
   .myphoto {
     height: 240px;
     width: 240px;
+  }
+
+  main.row {
+    grid-template-columns: 1fr;
+  }
+
+  .row .col:nth-child(2) {
+    margin-top: 30px;
   }
 
 }
