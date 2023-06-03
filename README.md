@@ -1,1 +1,1 @@
-![Portfolio](./screenshot.png)
+![Portfolio](./src/portfolio.png)
